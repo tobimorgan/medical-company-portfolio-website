@@ -1,0 +1,171 @@
+/* Local image overrides must load after the base stylesheet shorthands. */
+.portrait-hero,
+.portrait-one,
+.portrait-two,
+.portrait-three {
+  background-size: cover;
+  background-position: center top;
+}
+.portrait-hero {
+  background-image: url("../assets/images/hero.jpg");
+}
+.portrait-one {
+  background-image: url("../assets/images/doctor-maya.jpg");
+}
+.portrait-two {
+  background-image: url("../assets/images/doctor-james.jpg");
+}
+.portrait-three {
+  background-image: url("../assets/images/doctor-aisha.jpg");
+}
+.portrait img {
+  display: none;
+}
+.service-primary::before {
+  background-image: url("../assets/images/primary-care.jpg");
+}
+.service-womens::before {
+  background-image: url("../assets/images/womens-health.jpg");
+}
+.service-mental::before {
+  background-image: url("../assets/images/mental-wellbeing.jpg");
+}
+.service-urgent::before {
+  background-image: url("../assets/images/urgent-care.jpg");
+}
+
+/* Keep wide content inside the viewport at every intermediate width. */
+.stories,
+.appointment {
+  overflow: hidden;
+}
+.appointment-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+  gap: 40px;
+}
+.footer-bottom {
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, .04);
+}
+@media (max-width: 680px) {
+  .appointment-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Minimal borders and a tighter overall rhythm. */
+:root {
+  --line: rgba(23, 52, 76, .12);
+}
+.site-header,
+.stats-grid,
+.footer-bottom {
+  border-width: 1px;
+  border-color: rgba(23, 52, 76, .06);
+}
+.service-card,
+.appointment-form,
+.field input,
+.field select,
+.field textarea {
+  border-width: 1px;
+}
+.hero {
+  min-height: 540px;
+  padding: 58px 0 48px;
+}
+.section {
+  padding: 58px 0;
+}
+.about-copy {
+  padding-top: 12px;
+}
+.stats-grid {
+  margin-top: 38px;
+  padding-top: 22px;
+}
+.section-heading {
+  margin-bottom: 32px;
+}
+.services-grid,
+.team-grid {
+  gap: 12px;
+}
+.service-card {
+  min-height: 220px;
+  padding: 20px 18px;
+}
+.service-icon {
+  margin-bottom: 14px;
+}
+.service-card p {
+  min-height: 56px;
+}
+.team-section {
+  padding-top: 58px;
+  padding-bottom: 64px;
+}
+.doctor-card .portrait {
+  height: 210px;
+}
+.doctor-info {
+  padding: 16px 18px 18px;
+}
+.stories {
+  padding: 58px 0;
+}
+.appointment {
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+.appointment-form {
+  padding: 26px;
+}
+.form-row {
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.field input,
+.field select,
+.field textarea {
+  padding: 9px 11px;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+strong,
+.stat strong {
+  font-weight: 400;
+}
+em,
+.hero h1 em,
+h2 em {
+  color: inherit;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+}
+@media (max-width: 680px) {
+  .hero {
+    padding: 46px 0 58px !important;
+  }
+  .section,
+  .team-section,
+  .stories,
+  .appointment {
+    padding-top: 46px !important;
+    padding-bottom: 46px !important;
+  }
+  .stats-grid {
+    margin-top: 30px;
+  }
+  .appointment-form {
+    padding: 18px;
+  }
+}
